@@ -5,13 +5,13 @@ fork from [pinch-zoom](https://github.com/GoogleChromeLabs/pinch-zoom) but use [
 ### install
 
 ```shell
-yarn install usePinch
+yarn install use-pinch-ref
 ```
 
 ### use
 
 ```typescript
-import usePinch from 'usePinch';
+import usePinch from 'use-pinch-ref';
 
 const App = () => {
   const { pinchRef, coverRef } = usePinch<HTMLDivElement, HTMLDivElement>();

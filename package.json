@@ -35,7 +35,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "usepinch",
+  "name": "use-pinch-ref",
   "author": "MrWangJustToDo",
   "module": "dist/usepinch.esm.js",
   "size-limit": [
