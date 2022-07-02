@@ -6,9 +6,24 @@ import usePinch from '../.';
 const App = () => {
   const { pinchRef, coverRef } = usePinch<HTMLDivElement, HTMLDivElement>();
   return (
-    <div>
+    <div
+      style={{
+        width: '100vw',
+        height: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    >
       <div
-        style={{ width: '300px', height: '200px', border: '1px solid red' }}
+        style={{
+          width: '300px',
+          height: '200px',
+          border: '1px solid red',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
         ref={coverRef}
       >
         12

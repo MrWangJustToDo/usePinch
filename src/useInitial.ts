@@ -16,8 +16,10 @@ export const useInitialRef = <T, K>({
       }
     } else {
       const ele = pinchRef.current;
-      ele.setAttribute('data-pinchTarget', 'true');
+      ele.style.transformOrigin = '0 0';
+      ele.style.willChange = 'transform';
       ele.setAttribute('draggable', 'false');
+      ele.setAttribute('data-pinchTarget', 'true');
     }
     if (!coverRef.current || !(coverRef.current instanceof HTMLElement)) {
       if (process.env.NODE_ENV === 'development') {
@@ -25,8 +27,8 @@ export const useInitialRef = <T, K>({
       }
     } else {
       const ele = coverRef.current;
-      ele.setAttribute('data-pinchCover', 'true');
       ele.style.touchAction = 'none';
+      ele.setAttribute('data-pinchCover', 'true');
     }
   }, [pinchRef, coverRef, deps]);
 };

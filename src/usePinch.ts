@@ -1,13 +1,13 @@
 import { useRef } from 'react';
 import { Pointer } from 'pointer-tracker';
+import { pinchHelper } from './util';
 import { useBool } from './useBool';
 import { useWheel } from './useWheel';
 import { useTouch } from './useTouch';
 import { useMatrix } from './useMatrix';
-import { useCallbackRef } from './useCallbackRef';
-import { pinchHelper } from './util';
-import type { UsePinchProps, UsePinchType } from './type';
 import { useInitialRef } from './useInitial';
+import { useCallbackRef } from './useCallbackRef';
+import type { UsePinchProps, UsePinchType } from './type';
 
 interface SetTransformOpts {
   scale?: number;
@@ -56,7 +56,6 @@ export const usePinch: UsePinchType = <PinchRef extends HTMLElement, CoverRef ex
             scaleRef.current = false;
             if (endScale) endScale();
           }
-          item.style.willChange = 'transform';
           item.style.transform = 'translate(0px, 0px) scale(1)';
         } else {
           if (!scaleRef.current) {
@@ -68,7 +67,6 @@ export const usePinch: UsePinchType = <PinchRef extends HTMLElement, CoverRef ex
           target.f = y;
           target.a = scale;
           target.d = scale;
-          item.style.willChange = 'transform';
           item.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
         }
       }
