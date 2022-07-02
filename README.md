@@ -5,7 +5,7 @@ fork from [pinch-zoom](https://github.com/GoogleChromeLabs/pinch-zoom) but use [
 ### install
 
 ```shell
-yarn install use-pinch-ref
+yarn add use-pinch-ref
 ```
 
 ### use
